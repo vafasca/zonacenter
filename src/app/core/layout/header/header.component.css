@@ -1,0 +1,123 @@
+  .header-container{
+    width: 100%;
+    color: black;
+    font-family: Arial, sans-serif;
+  }
+
+  .central-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    height: 100%;
+  }
+
+  button{
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #784cfb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .top-bar .central-buttons .logo{
+    max-height: 50px;
+    object-fit: contain;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .top-bar{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+  }
+
+  .main-menu ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+    background-color: black;
+    height: 100px;
+    list-style: none;
+  }
+
+  .main-menu ul a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .main-menu ul a:hover{
+    color: #784cfb;
+  }
+
+  .client-login a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .client-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  .client-area:hover, a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #784cfb;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .client-area .client-login{
+    cursor: pointer;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  .social-icons i {
+    font-size: 2rem;
+    color: #000000;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .social-icons i:hover {
+    transition: color 0.3s;
+    color: #784cfb;
+  }
+
+/* Punto morado */
+.live-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #784cfb;
+  border-radius: 50%;
+  margin-left: 5px;
+  animation: blink 2s infinite;
+}
+
+/* Animación del parpadeo */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
