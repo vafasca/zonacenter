@@ -1,0 +1,26 @@
+<div class="pricing__hero">
+    <h1 class="pricing__hero__title">Planes de Precios</h1>
+    <p class="pricing__hero__subtitle">Elige el plan que más te convenga</p>
+  </div>
+  
+  <div class="pricing__features">
+    <div class="pricing__plan__toggler">
+      <input type="radio" id="monthly" name="planType" value="monthly" (change)="togglePlanType()" checked>
+      <label for="monthly">Mensual</label>
+      <input type="radio" id="annual" name="planType" value="annual" (change)="togglePlanType()">
+      <label for="annual">Anual</label>
+    </div>
+  
+    <h2 class="pricing__features__title">Características</h2>
+    <div class="pricing__plan">
+      <div class="pricing__plan__card" *ngFor="let plan of plans">
+        <h3>{{ plan.name }}</h3>
+        <p class="price">Bs.{{ getPrice(plan) }} / {{ getPlanType() }}</p>
+        <ul class="benefits">
+          <li *ngFor="let feature of plan.features">{{ feature }}</li>
+        </ul>
+        <a class="plan__btn" href="#">Solicitar</a>
+      </div>
+    </div>
+  </div>
+  

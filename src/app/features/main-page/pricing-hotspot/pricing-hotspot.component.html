@@ -1,0 +1,15 @@
+<div class="hotspot-pricing__hero">
+    <h2 class="hotspot-pricing__hero__title">Planes de Precio Hotspot</h2>
+  </div>
+  
+  <div class="hotspot-pricing__plan">
+    <div class="hotspot-pricing__plan__card" *ngFor="let plan of hotspotPlans">
+        <h3>{{ plan.name }}</h3>
+            <p class="price">Bs.{{ getPrice(plan) }}</p><!-- / {{ getPlanType() }} -->
+      <li *ngFor="let feature of plan.features">
+        <span class="check-icon">✓</span> {{ feature }}
+      </li>
+      <a class="plan__btn" href="#">Solicitar</a>
+    </div>
+  </div>
+  

@@ -1,0 +1,71 @@
+.hotspot-pricing__hero {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #784cfb;
+  color: #ffffff;
+}
+
+.hotspot-pricing__hero__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hotspot-pricing__plan {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+  list-style: none;
+}
+
+.hotspot-pricing__plan__card {
+  background-color: #ffffff;
+  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 250px;
+  text-align: left;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.hotspot-pricing__plan__card:hover {
+  transform: scale(1.05);
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.benefits {
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.benefits li {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.check-icon {
+  color: #784cfb; /* Azul */
+  margin-right: 0.5rem; /* Espacio entre el check y el texto */
+}
+
+.plan__btn {
+  background-color: #784cfb; /* Azul */
+  color: #ffffff; /* Blanco */
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.plan__btn:hover {
+  background-color: #784cfb; /* Gris claro */
+  color: black; /* Azul */
+}

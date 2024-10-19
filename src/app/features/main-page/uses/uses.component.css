@@ -1,0 +1,17 @@
+.custom-container {
+    background-color: black;
+    color: white;
+    text-align: center; /* Cambiar a 'center' para centrar el texto y los GIFs */
+    padding: 20px;
+    height: 100vh; /* Ajusta según sea necesario */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+  }
+  
+  .gif {
+    max-width: 300px; /* Tamaño mediano, ajusta según sea necesario */
+    margin: 10px 0; /* Margen superior e inferior entre los GIFs */
+  }
+  
