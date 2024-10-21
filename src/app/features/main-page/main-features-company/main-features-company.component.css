@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0 8%;
+    padding-bottom: 40px;
+}
+
+.container h1 {
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+}
+
+.container h1::after {
+    content: '';
+    background: #784cfb; /* Color del subrayado */
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    grid-gap: 30px;
+}
+
+.service {
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+}
+
+.service i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #784cfb; /* Color de los íconos */
+}
+
+.service h2 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.service:hover {
+    background: #784cfb; /* Color de fondo al hacer hover */
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.service:hover i {
+    color: #fff; /* Color del ícono al hacer hover */
+}
+
+/* Media Queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+
+    .container h1 {
+        font-size: 1.5rem; /* Ajusta el tamaño del título en pantallas más pequeñas */
+    }
+
+    .service {
+        font-size: 12px; /* Ajusta el tamaño de fuente en los servicios */
+    }
+
+    .service i {
+        font-size: 30px; /* Ajusta el tamaño de los íconos */
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .container h1 {
+        font-size: 1.2rem; /* Aún más pequeño para dispositivos móviles */
+    }
+
+    .service {
+        padding: 15px; /* Menos padding para que quepan en pantallas pequeñas */
+    }
+}

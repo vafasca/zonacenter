@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-interface HotspotPlan {
-  name: string;
-  price: number;
-  features: string[];
-}
+import { HotspotPlan } from '../models/tarifas-hotspot.model';
+import { PricingHotspotService } from 'src/app/core/services/pricing-hotspot.service';
+
 
 @Component({
   selector: 'app-pricing-hotspot',
@@ -11,27 +9,25 @@ interface HotspotPlan {
   styleUrls: ['./pricing-hotspot.component.css']
 })
 export class PricingHotspotComponent {
-  // Precios y características de los planes de hotspot
-  hotspotPlans: HotspotPlan[] = [
-    {
-      name: 'Plan Básico Hotspot',
-      price: 400,
-      features: ['No incluye equipo', 'Soporte Tecnico', 'Plantilla Custom', 'Garantia']
-    },
-    {
-      name: 'Plan Normal Hotspot',
-      price: 650,
-      features: ['Equipo Preconfigurado', 'Soporte Tecnico', 'Plantilla Custom', 'Garantia']
-    }
-  ];
+  hotspotPlans: HotspotPlan[] = [];
+
+  constructor(private hotSpotSvc: PricingHotspotService){}
+
+  ngOnInit(): void {
+    // Obtener los planes desde el servicio
+    this.hotSpotSvc.fetchHotspotPlans().subscribe(
+      (data) => {
+        this.hotspotPlans = data;
+        console.log('Hotspot Plans:', this.hotspotPlans);
+      },
+      (error) => {
+        console.error('Error al obtener los planes de hotspot:', error);
+      }
+    );
+  }
 
   // Método para obtener el precio (en este caso es fijo)
   getPrice(plan: HotspotPlan): number {
     return plan.price;
   }
-
-  // // El tipo de plan es fijo aquí
-  // getPlanType(): string {
-  //   return 'mensual';
-  // }
 }
