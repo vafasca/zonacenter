@@ -145,8 +145,7 @@
   }
   
   .plan__btn:hover {
-    background-color: #784cfb;
-    color: black;
+    background-color: #501deb;
   }
   
   @media (min-width: 990px) {
