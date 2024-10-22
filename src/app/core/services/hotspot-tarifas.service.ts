@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Firestore, QuerySnapshot, collection, getDocs, onSnapshot } from '@angular/fire/firestore';
+import { collection, Firestore, getDocs, onSnapshot, QuerySnapshot } from '@angular/fire/firestore';
 import { from, map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TarifasService {
+export class HotspotTarifasService {
   private tarifasCollection: any; // Almacena la referencia a la colección de tarifas.
 
   constructor(private firestore: Firestore) {
-    this.tarifasCollection = collection(this.firestore, 'tarifa'); // Inicializa la colección.
+    this.tarifasCollection = collection(this.firestore, 'hotspot'); // Inicializa la colección.
   }
+
   /**
    * Obtiene las tarifas de la colección en tiempo real.
    * @returns Un observable que emite los datos de tarifas actualizados.

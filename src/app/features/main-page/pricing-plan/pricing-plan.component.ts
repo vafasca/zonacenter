@@ -1,15 +1,7 @@
 import { Component } from '@angular/core';
-// import { ClientSvcService } from 'src/app/core/services/firebase-services/client-svc.service';
-import { SheetDataService } from 'src/app/core/services/sheet-data.service';
 import { TarifasService } from 'src/app/core/services/tarifas.service';
-
-interface Plan {
-  name: string;
-  monthlyPrice: number;
-  annualPrice: number;
-  features: string[];
-}
-
+import { Plan } from '../models/tarifas.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-pricing-plan',
@@ -19,35 +11,55 @@ interface Plan {
 export class PricingPlanComponent {
   isAnnual: boolean = false;
   plans: Plan[] = [];
-  constructor(private sheetDataService: SheetDataService, private tarifaSvc: TarifasService){}
+  private subscription: Subscription = new Subscription(); // Para manejar la suscripción
+
+  constructor(private tarifaSvc: TarifasService){}
 
   ngOnInit(): void {
-    console.log("ng on init")
-    this.loadTarifas();
+    console.log("Cargando planes de precios...");
+    this.loadTarifas();  // Carga de tarifas al iniciar el componente
   }
- loadTarifas() {
-     this.tarifaSvc.getTarifas().subscribe(
-       (tarifa) => {
-         this.plans = tarifa;
-       },
-       (error) => {
-         console.error('Error al obtener las tarifas:', error);
-       }
-     );
-  }
+ /**
+   * Carga las tarifas utilizando el servicio TarifasService.
+   */
+ private loadTarifas(): void {
+  this.subscription = this.tarifaSvc.getTarifas().subscribe(
+    (tarifas) => {
+      this.plans = tarifas;  // Asignación de tarifas obtenidas a la lista de planes
+    },
+    (error) => {
+      console.error('Error al obtener las tarifas:', error);  // Manejo de errores
+    }
+  );
+}
 
-  // Método para cambiar entre mensual y anual
-  togglePlanType() {
-    this.isAnnual = !this.isAnnual;
-  }
+/**
+ * Alterna entre los tipos de planes (mensual/anual).
+ */
+togglePlanType(): void {
+  this.isAnnual = !this.isAnnual;  // Cambia el estado del tipo de plan
+}
 
-  // Método para obtener el precio actual basado en el tipo de plan
-  getPrice(plan: Plan): number {
-    return this.isAnnual ? plan.annualPrice : plan.monthlyPrice;
-  }
+/**
+ * Obtiene el precio actual basado en el tipo de plan seleccionado.
+ * @param plan El plan del que se desea obtener el precio.
+ * @returns El precio correspondiente (mensual o anual).
+ */
+getPrice(plan: Plan): number {
+  return this.isAnnual ? plan.annualPrice : plan.monthlyPrice;  // Retorna el precio según el estado
+}
 
-  // Método para obtener el tipo de plan actual
-  getPlanType(): string {
-    return this.isAnnual ? 'Anual' : 'Mensual';
-  }
+/**
+ * Devuelve el tipo de plan actual.
+ * @returns Un string que indica si es 'Anual' o 'Mensual'.
+ */
+getPlanType(): string {
+  return this.isAnnual ? 'Anual' : 'Mensual';  // Retorna el tipo de plan actual
+}
+
+ngOnDestroy(): void {
+  // Limpia la suscripción para evitar fugas de memoria
+  this.subscription.unsubscribe();
+}
+
 }
