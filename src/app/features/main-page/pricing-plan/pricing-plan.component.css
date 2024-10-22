@@ -74,8 +74,9 @@
   /* Estilo del segundo plan */
   .pricing__plan__card:nth-child(2) {
     background-color: #8e68ff;
-    max-width: 300px;
+    max-width: 350px;
     height: 420px;
+    color: white;
     transition: height 0.3s, transform 0.3s;
   }
 
@@ -87,7 +88,7 @@
   .recommended {
     background-image: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     color: #ffffff;
-    max-width: 320px;
+    max-width: 350px;
     transform: scale(1.05);
     transition: transform 0.35s ease-out;
   }
@@ -150,7 +151,7 @@
   
   @media (min-width: 990px) {
     .pricing__plan__card {
-      max-width: 280px;
+      max-width: 350px;
     }
   
     .pricing__plan__card + .pricing__plan__card {
