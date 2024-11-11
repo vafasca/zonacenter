@@ -11,6 +11,7 @@ import { PricingPlanComponent } from './pricing-plan/pricing-plan.component';
 import { FormsModule } from '@angular/forms';
 import { PricingHotspotComponent } from './pricing-hotspot/pricing-hotspot.component';
 import { MainFeaturesCompanyComponent } from './main-features-company/main-features-company.component';
+import { WirelessInternetComponent } from './wireless-internet/wireless-internet.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MainFeaturesCompanyComponent } from './main-features-company/main-featu
     UsesComponent,
     PricingPlanComponent,
     PricingHotspotComponent,
-    MainFeaturesCompanyComponent
+    MainFeaturesCompanyComponent,
+    WirelessInternetComponent
   ],
   imports: [
     CommonModule,
