@@ -11,7 +11,9 @@ import { PricingPlanComponent } from './pricing-plan/pricing-plan.component';
 import { FormsModule } from '@angular/forms';
 import { PricingHotspotComponent } from './pricing-hotspot/pricing-hotspot.component';
 import { MainFeaturesCompanyComponent } from './main-features-company/main-features-company.component';
-import { WirelessInternetComponent } from './wireless-internet/wireless-internet.component';
+import { WirelessInternetComponent } from './wireless-connection/wireless-internet/wireless-internet.component';
+import { WeOfferDetailsComponent } from './wireless-connection/we-offer-details/we-offer-details.component';
+import { MainWirelessConnectionPageComponent } from './wireless-connection/main-wireless-connection-page/main-wireless-connection-page.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { WirelessInternetComponent } from './wireless-internet/wireless-internet
     PricingPlanComponent,
     PricingHotspotComponent,
     MainFeaturesCompanyComponent,
-    WirelessInternetComponent
+    WirelessInternetComponent,
+    WeOfferDetailsComponent,
+    MainWirelessConnectionPageComponent
   ],
   imports: [
     CommonModule,
