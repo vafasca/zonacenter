@@ -44,11 +44,11 @@
 }
 
   /* Increased margin to ensure space for the full WiFi icon */
-.content-wrapper {
+/* .content-wrapper {
     margin-bottom: 80px;
     background-color: #ffffff;
     height: 80vh;
-}
+} */
 
 .wireless-content{
     padding-top: 100px;
