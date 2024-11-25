@@ -83,6 +83,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 50px;
 }
 
 .menu-list li {
@@ -146,8 +147,14 @@ button:hover {
   background-color: #5b36c5;
 }
 
+@media (max-width: 907px) {
+  .menu-list {
+    gap: 10px;
+  }
+}
+
 /* Responsiveness */
-@media (max-width: 700px) {
+@media (max-width: 707px) {
   .top-bar {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -179,6 +186,7 @@ button:hover {
 
   .menu-list.active {
     display: flex;
+    margin-top: 20px;
   }
 
   .logo-area {
