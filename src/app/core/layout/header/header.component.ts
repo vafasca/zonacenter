@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  menuOpen = false;
 
+  ngOnInit(): void {
+
+  }
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
 }
