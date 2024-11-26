@@ -1,0 +1,35 @@
+
+<div class="faq-title">
+  <h1>Preguntas Frecuentes</h1>
+</div>
+<div class="row dashboard-cards" [ngClass]="{ showing: showing }">
+  <div
+    *ngFor="let card of cards; let i = index"
+    class="card col-md-4"
+    [ngClass]="{ 'd-card-show': selectedCard === i }"
+    (click)="toggleCard(i)"
+  >
+    <div class="card-title">
+      <h2>
+        {{ card.title }}
+        <small>{{ card.subtitle }}</small>
+      </h2>
+      <div class="task-count">{{ card.count }}</div>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        <ul class="task-list">
+          <li *ngFor="let task of card.tasks">
+            <strong>{{ task.name }}</strong>
+            <p>{{ task.progress }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-flap flap2">
+      <div class="card-actions">
+        <a class="btn" href="#">Cerrar</a>
+      </div>
+    </div>
+  </div>
+</div>

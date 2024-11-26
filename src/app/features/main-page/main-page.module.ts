@@ -14,6 +14,7 @@ import { MainFeaturesCompanyComponent } from './main-features-company/main-featu
 import { WirelessInternetComponent } from './wireless-connection/wireless-internet/wireless-internet.component';
 import { WeOfferDetailsComponent } from './wireless-connection/we-offer-details/we-offer-details.component';
 import { MainWirelessConnectionPageComponent } from './wireless-connection/main-wireless-connection-page/main-wireless-connection-page.component';
+import { InformationInterestComponent } from './information-interest/information-interest.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MainWirelessConnectionPageComponent } from './wireless-connection/main-
     MainFeaturesCompanyComponent,
     WirelessInternetComponent,
     WeOfferDetailsComponent,
-    MainWirelessConnectionPageComponent
+    MainWirelessConnectionPageComponent,
+    InformationInterestComponent
   ],
   imports: [
     CommonModule,
