@@ -154,7 +154,7 @@
   margin: 3px 0;
   list-style-type: none;
   border-bottom: 1px solid #e9ebed;
-  border-left: 3px solid #f36525;
+  border-left: 3px solid #784cfb;
   transition: all .2s ease;
 }
 .dashboard-cards .task-list li:hover {
@@ -163,17 +163,17 @@
 }
 .dashboard-cards .task-list li span {
   float: right;
-  color: #f36525;
+  color: #784cfb;
   margin-right: 5px;
 }
 .dashboard-cards.showing .card.d-card-show .task-count {
   color: #ffffff;
-  background: #f36525;
+  background: #784cfb;
   transition: all .2s ease;
 }
 .dashboard-cards .card-actions .btn {
   color: #333;
 }
 .dashboard-cards .card-actions .btn:hover {
-  color: #f36525;
+  color: #784cfb;
 }
