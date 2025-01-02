@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { PricingPlanComponent } from '../pricing-plan/pricing-plan.component';
 import { FaqComponent } from '../faq/faq.component';
 import { PricingHotspotComponent } from '../pricing-hotspot/pricing-hotspot.component';
+import { ServiceConditionComponent } from '../service-condition/service-condition.component';
 
 @Component({
   selector: 'app-information-interest',
@@ -52,7 +53,7 @@ export class InformationInterestComponent {
         height: '500px',
       });
     } else if (index === 2) {
-      this.dialog.open(PricingHotspotComponent, {
+      this.dialog.open(ServiceConditionComponent, {
         width: '800px',
         height: '500px',
       });

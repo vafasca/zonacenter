@@ -1,1 +1,34 @@
-<p>service-condition works!</p>
+<div class="service-conditions-container">
+    <div class="service-conditions-content">
+      <div class="service-conditions-header">
+        <div class="icon-wrapper">
+          <i class="icon-file-text"></i>
+        </div>
+        <h2 class="service-title">Condiciones de Servicio</h2>
+        <p class="service-description">
+          Consideramos la transparencia de servicio como valor de responsabilidad al cliente. Si tiene dudas
+          sobre las condiciones de servicio no dude en escribirnos.
+        </p>
+      </div>
+  
+      <div class="service-cards-grid">
+        <div *ngFor="let condition of serviceConditionsData" class="service-card">
+          <h3 class="card-title">{{ condition.title }}</h3>
+          <p class="card-description">{{ condition.description }}</p>
+          <div *ngIf="condition.highlight" class="card-highlight">
+            {{ condition.highlight }}
+          </div>
+          <div *ngIf="condition.highlight2" class="card-highlight">
+            {{ condition.highlight }}
+          </div>
+        </div>
+      </div>
+  
+      <div class="service-footer">
+        <button class="info-button">
+          ¿Necesitas más información?
+        </button>
+      </div>
+    </div>
+  </div>
+  
