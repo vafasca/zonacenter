@@ -1,0 +1,20 @@
+<section class="features">
+  <h2 class="features__title">Que te ofrecemos</h2>
+  <div class="features__grid">
+    <div *ngFor="let feature of featuresData" class="feature" data-aos="fade-up">
+      <div class="feature__glow"></div>
+      <div class="feature__content">
+        <div class="feature__header">
+          <div class="feature__icon">
+            <i *ngIf="feature.icon === 'icon1'" class="fas fa-circle"></i> <!-- Font Awesome Icon 1 -->
+            <i *ngIf="feature.icon === 'icon2'" class="fas fa-shield-alt"></i> <!-- Font Awesome Icon 2 (escudo) -->
+            <i *ngIf="feature.icon === 'icon3'" class="fas fa-credit-card"></i> <!-- Font Awesome Icon 3 -->
+            <i *ngIf="feature.icon === 'icon4'" class="fas fa-gift"></i> <!-- Font Awesome Icon 4 (regalo) -->
+          </div>
+          <h3>{{ feature.title }}</h3>
+        </div>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

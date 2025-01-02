@@ -1,0 +1,51 @@
+/* Features section */
+.features {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.features__title {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #a855f7, #ec4899); /* Colores directamente definidos */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.features__grid {
+    display: grid;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.feature {
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Borde directamente definido */
+    border-radius: 1rem;  /* Agrega un radio de borde para redondear las esquinas */
+    padding: 1rem;  /* Agregar algo de espacio interior */
+}
+
+
+
+/* Glow effect */
+.feature__glow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
+    transition: all 0.3s ease;
+    border-radius: 1rem;
+}
+
+.feature:hover{
+    border-color: #784cfb;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -11,7 +11,7 @@ export class SlidePostComponent {
   slides = [
     {
       backgroundImage: 'https://picsum.photos/800/400?random=1',
-      smallImage: 'https://scontent.fcbb1-1.fna.fbcdn.net/v/t39.30808-6/278844370_3189489407937617_4141473196088528978_n.png?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=QRzqIEQyaLAQ7kNvgFUa0JZ&_nc_zt=23&_nc_ht=scontent.fcbb1-1.fna&_nc_gid=ApUHplt_KRnS0LQ-wBhcNa7&oh=00_AYDImd6IYKk_MLVAXy4mSK-6maCovvGxOSNEyV9cdOitOA&oe=67184FDE',
+      smallImage: 'https://firebasestorage.googleapis.com/v0/b/zonacenter-47ad8.appspot.com/o/assets%2Fpruebaa.png?alt=media&token=aa8b9512-3186-4e7b-9fb4-4822bfc6974d',
     },
     {
       backgroundImage: 'https://picsum.photos/800/400?random=2',

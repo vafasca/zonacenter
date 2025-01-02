@@ -16,7 +16,6 @@ export class PricingPlanComponent {
   constructor(private tarifaSvc: TarifasService){}
 
   ngOnInit(): void {
-    console.log("Cargando planes de precios...");
     this.loadTarifas();  // Carga de tarifas al iniciar el componente
   }
  /**

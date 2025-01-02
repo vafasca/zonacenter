@@ -123,6 +123,15 @@ a:hover{
     color: black;
 }
 
+@media (max-width: 975px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 /* Centramos en pantallas de 780px o menos */
 @media (max-width: 780px) {
     body {
@@ -138,6 +147,6 @@ a:hover{
     }
 
     .box {
-        max-width: 90%;
+        max-width: 80%;
     }
 }

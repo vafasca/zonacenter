@@ -11,6 +11,13 @@ import { PricingPlanComponent } from './pricing-plan/pricing-plan.component';
 import { FormsModule } from '@angular/forms';
 import { PricingHotspotComponent } from './pricing-hotspot/pricing-hotspot.component';
 import { MainFeaturesCompanyComponent } from './main-features-company/main-features-company.component';
+import { WirelessInternetComponent } from './wireless-connection/wireless-internet/wireless-internet.component';
+import { WeOfferDetailsComponent } from './wireless-connection/we-offer-details/we-offer-details.component';
+import { MainWirelessConnectionPageComponent } from './wireless-connection/main-wireless-connection-page/main-wireless-connection-page.component';
+import { InformationInterestComponent } from './information-interest/information-interest.component';
+import { MaterialModule } from 'src/app/shared/material/material.module';
+import { FaqComponent } from './faq/faq.component';
+import { ServiceConditionComponent } from './service-condition/service-condition.component';
 
 
 @NgModule({
@@ -21,13 +28,20 @@ import { MainFeaturesCompanyComponent } from './main-features-company/main-featu
     UsesComponent,
     PricingPlanComponent,
     PricingHotspotComponent,
-    MainFeaturesCompanyComponent
+    MainFeaturesCompanyComponent,
+    WirelessInternetComponent,
+    WeOfferDetailsComponent,
+    MainWirelessConnectionPageComponent,
+    InformationInterestComponent,
+    FaqComponent,
+    ServiceConditionComponent
   ],
   imports: [
     CommonModule,
     MainPageRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

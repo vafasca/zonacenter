@@ -1,0 +1,14 @@
+<div class="main-container-wireless-connection">
+    <section>
+        <app-wireless-internet></app-wireless-internet>
+    </section>
+<section>
+    <app-we-offer-details></app-we-offer-details>
+    <app-pricing-plan></app-pricing-plan>
+    <app-information-interest></app-information-interest>
+</section>
+</div>
+
+<button *ngIf="isButtonVisible" (click)="scrollToTop()" class="scroll-to-top">
+    <i class="bi bi-arrow-up"></i>
+</button>
