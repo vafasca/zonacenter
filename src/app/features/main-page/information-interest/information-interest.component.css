@@ -77,30 +77,7 @@
   border-top: 1px solid #ddd;
   padding: 10px 15px 0 15px;
 }
-.dashboard-cards .card .card-actions {
-  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
-  padding: 10px;
-  text-align: center;
-}
-.dashboard-cards .card .card-flap {
-  background: #d9d9d9;
-  position: absolute;
-  width: 100%;
-  -webkit-transform-origin: top;
-  transform-origin: top;
-  -webkit-transform: rotateX(-90deg);
-  transform: rotateX(-90deg);
-}
-.dashboard-cards .card .flap1 {
-  -webkit-transition: all 0.3s 0.3s ease-out;
-  transition: all 0.3s 0.3s ease-out;
-  z-index: -1;
-}
-.dashboard-cards .card .flap2 {
-  -webkit-transition: all 0.3s 0s ease-out;
-  transition: all 0.3s 0s ease-out;
-  z-index: -2;
-}
+
 .dashboard-cards.showing .card {
   cursor: pointer;
   opacity: 0.6;
@@ -117,19 +94,7 @@
   -webkit-transform: scale(1) !important;
   transform: scale(1) !important;
 }
-.dashboard-cards .card.d-card-show .card-flap {
-  background: #ffffff;
-  -webkit-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-}
-.dashboard-cards .card.d-card-show .flap1 {
-  -webkit-transition: all 0.3s 0s ease-out;
-  transition: all 0.3s 0s ease-out;
-}
-.dashboard-cards .card.d-card-show .flap2 {
-  -webkit-transition: all 0.3s 0.2s ease-out;
-  transition: all 0.3s 0.2s ease-out;
-}
+
 .dashboard-cards .card .task-count {
   width: 40px;
   height: 40px;
@@ -145,35 +110,9 @@
   transition: all .2s ease;
 }
 
-.dashboard-cards .task-list {
-  padding: 0 !important;
-}
-.dashboard-cards .task-list li {
-  padding: 10px 0;
-  padding-left: 10px;
-  margin: 3px 0;
-  list-style-type: none;
-  border-bottom: 1px solid #e9ebed;
-  border-left: 3px solid #784cfb;
-  transition: all .2s ease;
-}
-.dashboard-cards .task-list li:hover {
-  background: #ecf0f1;
-  transition: all .2s ease;
-}
-.dashboard-cards .task-list li span {
-  float: right;
-  color: #784cfb;
-  margin-right: 5px;
-}
 .dashboard-cards.showing .card.d-card-show .task-count {
   color: #ffffff;
   background: #784cfb;
   transition: all .2s ease;
 }
-.dashboard-cards .card-actions .btn {
-  color: #333;
-}
-.dashboard-cards .card-actions .btn:hover {
-  color: #784cfb;
-}
+

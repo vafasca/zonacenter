@@ -15,6 +15,7 @@ import { WirelessInternetComponent } from './wireless-connection/wireless-intern
 import { WeOfferDetailsComponent } from './wireless-connection/we-offer-details/we-offer-details.component';
 import { MainWirelessConnectionPageComponent } from './wireless-connection/main-wireless-connection-page/main-wireless-connection-page.component';
 import { InformationInterestComponent } from './information-interest/information-interest.component';
+import { MaterialModule } from 'src/app/shared/material/material.module';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { InformationInterestComponent } from './information-interest/information
     CommonModule,
     MainPageRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
