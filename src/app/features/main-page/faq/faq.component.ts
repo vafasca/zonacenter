@@ -27,7 +27,7 @@ export class FaqComponent {
       }
     );
   }
-  
+
   toggleFAQ(index: number): void {
     this.openIndex = this.openIndex === index ? null : index;
   }

@@ -1,0 +1,106 @@
+/* Contenedor general */
+.service-conditions-container {
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+  /* Contenido principal */
+.service-conditions-content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+  /* Encabezado */
+.service-conditions-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    background-color: #784cfb;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-file-text::before {
+    content: "📄";
+    font-size: 2rem;
+    color: white;
+}
+
+.service-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a202c;
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    color: #718096;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+  /* Tarjetas */
+.service-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.service-card {
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    color: #4a5568;
+}
+
+/* Destacado */
+.card-highlight {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: -4px 0 0 rgba(120, 76, 251, 0.5); /* Sombra morada a la izquierda */
+}
+
+.service-footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.info-button {
+    background-color: #784cfb;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.info-button:hover {
+    background-color: #6a43e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
