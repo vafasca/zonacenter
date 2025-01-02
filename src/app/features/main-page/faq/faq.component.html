@@ -1,0 +1,29 @@
+<div class="faq-section">
+    <div class="header">
+      <div class="icon">
+        <img src="../../../../assets/images/faq-icon.png" alt="FAQ Icon" />
+      </div>
+      <h2>Preguntas Frecuentes</h2>
+      <p>Encuentra respuestas a las preguntas más comunes sobre nuestros servicios</p>
+    </div>
+  
+    <div class="faq-list">
+      <div
+        class="faq-item"
+        *ngFor="let faq of faqs2; let i = index"
+        [class.open]="openIndex === i"
+      >
+        <button class="faq-question" (click)="toggleFAQ(i)">
+          <span>{{ faq.question }}</span>
+        </button>
+        <div class="faq-answer" *ngIf="openIndex === i">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="more-questions">
+      <button>¿Tienes más preguntas?</button>
+    </div>
+  </div>
+  

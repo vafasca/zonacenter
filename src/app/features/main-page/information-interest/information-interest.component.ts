@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PricingPlanComponent } from '../pricing-plan/pricing-plan.component';
+import { FaqComponent } from '../faq/faq.component';
+import { PricingHotspotComponent } from '../pricing-hotspot/pricing-hotspot.component';
 
 @Component({
   selector: 'app-information-interest',
@@ -22,12 +24,12 @@ export class InformationInterestComponent {
     {
       title: 'Condiciones de servicio',
       subtitle: 'Aprovecha las funciones avanzadas',
-      count: 3
+      count: 2
     },
     {
       title: 'Preguntas frecuentes',
       subtitle: 'Aprovecha las funciones avanzadas',
-      count: 4
+      count: 3
     }
   ];
 
@@ -44,12 +46,24 @@ export class InformationInterestComponent {
   }
 
   onCardClick(index: number): void {
-    alert(index);
-    this.dialog.open(PricingPlanComponent, {
-      width: '800px',
-      height: '500px',
-      data: { message: 'Este es un ejemplo de diálogo.' },
-    });
+    if (index === 1) {
+      this.dialog.open(PricingPlanComponent, {
+        width: '800px',
+        height: '500px',
+      });
+    } else if (index === 2) {
+      this.dialog.open(PricingHotspotComponent, {
+        width: '800px',
+        height: '500px',
+      });
+    } else if (index === 3) {
+      this.dialog.open(FaqComponent, {
+        width: '800px',
+        height: '500px',
+      });
+    } else {
+      console.warn('Índice no manejado:', index);
+    }
   }
 
   resetHeight(): void {

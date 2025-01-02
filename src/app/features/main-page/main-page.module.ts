@@ -16,6 +16,8 @@ import { WeOfferDetailsComponent } from './wireless-connection/we-offer-details/
 import { MainWirelessConnectionPageComponent } from './wireless-connection/main-wireless-connection-page/main-wireless-connection-page.component';
 import { InformationInterestComponent } from './information-interest/information-interest.component';
 import { MaterialModule } from 'src/app/shared/material/material.module';
+import { FaqComponent } from './faq/faq.component';
+import { ServiceConditionComponent } from './service-condition/service-condition.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { MaterialModule } from 'src/app/shared/material/material.module';
     WirelessInternetComponent,
     WeOfferDetailsComponent,
     MainWirelessConnectionPageComponent,
-    InformationInterestComponent
+    InformationInterestComponent,
+    FaqComponent,
+    ServiceConditionComponent
   ],
   imports: [
     CommonModule,
