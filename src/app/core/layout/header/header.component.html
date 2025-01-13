@@ -1,26 +1,10 @@
 <header class="header-container">
-  <!-- Barra Superior -->
-  <div class="top-bar">
-    <div class="logo-area">
-      <img src="../../assets/images/logo_soto.png" alt="Zona Center" class="logo">
-    </div>
-    <div class="client-social">
-      <div class="client-area">
-        <span class="material-symbols-outlined">person</span>
-        <a href="#" class="client-login">Mi cuenta</a>
-      </div>
-      <div class="social-icons">
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-twitter"></i></a>
-      </div>
-    </div>
-  </div>
-  
-
-
   <!-- Botones principales encima del toggle -->
   <div class="action-buttons">
+    <div class="client-area">
+      <span class="material-symbols-outlined">person</span>
+      <a href="#" class="client-login">Mi cuenta</a>
+    </div>
     <button class="work-with-us">
       <span class="material-symbols-outlined">handshake</span>
       Trabaja con nosotros
@@ -29,15 +13,23 @@
       <span class="material-symbols-outlined">support_agent</span>
       Servicio de Consultoría
     </button>
+    <div class="social-icons">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+    </div>
   </div>
 
   <!-- Menú Principal -->
   <nav class="main-menu">
+    <div routerLink="/" class="logo-area">
+      <img src="../../assets/images/logo_soto.png" alt="Zona Center" class="logo">
+    </div>
     <button class="menu-toggle" (click)="toggleMenu()">☰</button>
     <ul [class.active]="menuOpen" class="menu-list">
-      <li><a href="#">Servicios</a></li>
-      <li><a href="#">Acerca de</a></li>
-      <li><a href="#">Precios</a></li>
+      <li><a href="#">Conexión Inalámbrica</a></li>
+      <li><a href="#">Sistema Hostpot</a></li>
+      <li><a href="#">Servicio de Consultoría TI</a></li>
       <li><a href="#">Contactos</a></li>
       <li><a href="#">Realizar Pago</a></li>
       <li>
@@ -45,6 +37,34 @@
           PlutoTv <span class="live-dot"></span>
         </a>
       </li>
+          <!-- Nuevo contenedor dinámico -->
+    <li *ngIf="showExtraButtons" class="dropdown-extra">
+      <a href="#" class="client-login">Mi cuenta</a>
+      <button class="work-with-us">
+        <span class="material-symbols-outlined">handshake</span>
+        Trabaja con nosotros
+      </button>
+      <button class="consultory">
+        <span class="material-symbols-outlined">support_agent</span>
+        Servicio de Consultoría
+      </button>
+    </li>
     </ul>
   </nav>
+  <div class="icon-section">
+    <div class="icon">
+      <img routerLink="/Wireless-Internet" src="../../../../assets/images/torre-de-señal.png" alt="Fibra + Móvil">
+      <span>Conexión Inalámbrica</span>
+    </div>
+    <div class="icon">
+      <img src="../../../../assets/images/servicios-de-consultoria.png" alt="Móvil">
+      <span>Sistema Hostpot</span>
+    </div>
+    <div class="icon">
+      <img src="../../../../assets/images/wifi.png" alt="Fibra">
+      <span>Servicio de Consultoría TI</span>
+    </div>
+  </div>
+  
+  
 </header>
