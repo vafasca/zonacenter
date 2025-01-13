@@ -1,34 +1,28 @@
 <swiper-container
   #swiper
   class="mySwiper"
-  navigation="true"
-  pagination="true"
-  pagination-clickable="true"
   loop="true"
   autoplay-delay="3000"
   autoplay-disable-on-interaction="false">
 
   <swiper-slide *ngFor="let slide of slides">
-    <div
-      class="slide-content"
-      [ngStyle]="{'background-image': 'url(' + slide.backgroundImage + ')'}">
+    <div class="slide-content">
       <img
-        *ngIf="slide.smallImage; else defaultImage"
-        [src]="slide.smallImage"
-        alt="Small image"
-        class="small-image"
+        *ngIf="isMobile; else desktopImage"
+        [src]="slide.mobileImage"
+        alt="Mobile image"
+        class="responsive-image"
         loading="lazy"
         (error)="onImageError($event)" />
 
-      <ng-template #defaultImage>
+      <ng-template #desktopImage>
         <img
-          src="../../../assets/images/placeholder_default.png"
-          alt="Default image"
-          class="small-image"
+          [src]="slide.desktopImage"
+          alt="Desktop image"
+          class="responsive-image"
           loading="lazy"
           (error)="onImageError($event)" />
       </ng-template>
-
     </div>
   </swiper-slide>
 </swiper-container>

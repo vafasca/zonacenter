@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-slide-post',
@@ -7,30 +7,26 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class SlidePostComponent {
   @ViewChild('swiper', { static: false }) swiper?: ElementRef;
+  isMobile: boolean = window.innerWidth <= 708;
 
   slides = [
     {
-      backgroundImage: 'https://picsum.photos/800/400?random=1',
-      smallImage: 'https://firebasestorage.googleapis.com/v0/b/zonacenter-47ad8.appspot.com/o/assets%2Fpruebaa.png?alt=media&token=aa8b9512-3186-4e7b-9fb4-4822bfc6974d',
+      desktopImage: 'https://www.ptvtelecom.com//wp-content/uploads/banneer-plan-akistad-ordenador-modificado-67.webp',
+      mobileImage: 'https://www.ptvtelecom.com//wp-content/uploads/banner-plana-mistad-modificado-movil-68.webp',
     },
     {
-      backgroundImage: 'https://picsum.photos/800/400?random=2',
-      smallImage: 'https://picsum.photos/800/400?random=4', //imagenens 800wx400h
+      desktopImage: 'https://www.ptvtelecom.com//wp-content/uploads/1995-ordenador-scaled.webp',
+      mobileImage: 'https://www.ptvtelecom.com//wp-content/uploads/1995-movil.webp',
     },
     {
-      backgroundImage: 'https://picsum.photos/800/400?random=3',
-      smallImage: 'https://picsum.photos/800/400?random=7',
+      desktopImage: 'https://www.ptvtelecom.com//wp-content/uploads/zapimas_liga_hypermotion.webp',
+      mobileImage: 'https://www.ptvtelecom.com//wp-content/uploads/zapimas_liga_hypermotion_mobile.webp',
     },
   ];
 
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.swiper?.nativeElement.swiper?.update();
-    });
-
-    window.addEventListener('resize', () => {
-      this.swiper?.nativeElement.swiper?.update();
-    });
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isMobile = window.innerWidth <= 708;
   }
 
     // Maneja el error de carga de imágenes
