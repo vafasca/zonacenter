@@ -19,13 +19,17 @@ import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HotspotMikrotikComponent } from './features/hostpot/hotspot-mikrotik/hotspot-mikrotik.component';
+import { MainHotspotComponent } from './features/hostpot/main-hotspot/main-hotspot.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HotspotMikrotikComponent,
+    MainHotspotComponent
   ],
   imports: [
     BrowserModule,
