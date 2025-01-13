@@ -24,6 +24,17 @@ export class SlidePostComponent {
     },
   ];
 
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.swiper?.nativeElement.swiper?.update(); // Actualiza el Swiper
+    });
+
+    // Añadir listener de resize
+    window.addEventListener('resize', () => {
+      this.swiper?.nativeElement.swiper?.update(); // Actualiza Swiper en el resize
+      this.isMobile = window.innerWidth <= 708;
+    });
+  }
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.isMobile = window.innerWidth <= 708;

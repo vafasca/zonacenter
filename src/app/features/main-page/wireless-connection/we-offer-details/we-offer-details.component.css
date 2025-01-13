@@ -13,6 +13,10 @@
     padding-bottom: 20px;
 }
 
+.feature__icon i {
+    font-size: 2rem;
+}
+
 .features__grid {
     display: grid;
     gap: 2rem;
