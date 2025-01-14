@@ -130,6 +130,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 20px;
+  background-color: #fff;
 }
 
 button {
@@ -281,6 +282,13 @@ button:hover {
       margin-right: 10px; /* Agrega un poco de espacio al lado derecho */
     }
 
+    .hidden {
+      display: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
 }
 
 /* Responsiveness */
@@ -377,5 +385,12 @@ button:hover {
 
   .action-buttons {
     gap: 20px;
+  }
+
+  .hidden {
+    display: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-20px);
   }
 }

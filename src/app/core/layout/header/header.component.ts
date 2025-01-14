@@ -8,6 +8,8 @@ import { Component, ElementRef, HostListener } from '@angular/core';
 export class HeaderComponent {
   menuOpen = false;
   showExtraButtons = false;
+  hideIconSection = false;
+  private lastScrollPosition = 0;
 
   constructor(private eRef: ElementRef) {}
 
@@ -27,7 +29,7 @@ export class HeaderComponent {
 
   private checkScreenSize(): void {
     const screenWidth = window.innerWidth;
-    this.showExtraButtons = screenWidth <= 1250; // Mostrar botones extras en dropdown si el ancho es menor o igual a 1250px
+    this.showExtraButtons = screenWidth <= 1250;
   }
 
   handleClickOutside(event: Event): void {
@@ -45,4 +47,16 @@ export class HeaderComponent {
   ngOnDestroy(): void {
     document.removeEventListener('click', this.handleClickOutside.bind(this));
   }
+
+    // Detectar scroll hacia abajo
+    @HostListener('window:scroll', [])
+    onWindowScroll(): void {
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScrollPosition > this.lastScrollPosition) {
+        this.hideIconSection = true;
+      } else {
+        this.hideIconSection = false;
+      }
+      this.lastScrollPosition = currentScrollPosition;
+    }
 }
