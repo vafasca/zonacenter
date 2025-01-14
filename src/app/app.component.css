@@ -1,0 +1,27 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+router-outlet {
+    display: block;
+    padding-top: 160px;
+}
+
+@media screen and (max-width: 1265px) {
+    router-outlet {
+        padding-top: 290px;
+    }
+}
+
+
+@media screen and (max-width: 708px) {
+    router-outlet {
+        padding-top: 200px;
+    }
+}
