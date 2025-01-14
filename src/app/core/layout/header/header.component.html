@@ -51,18 +51,18 @@
     </li>
     </ul>
   </nav>
-  <div class="icon-section">
+  <div class="icon-section" [ngClass]="{'hidden': hideIconSection}">
     <div class="icon">
       <img routerLink="/Wireless-Internet" src="../../../../assets/images/torre-de-señal.png" alt="Fibra + Móvil">
-      <span>Conexión Inalámbrica</span>
+      <span>Internet</span>
     </div>
     <div class="icon">
       <img routerLink="/Hotspot-Mikrotik" src="../../../../assets/images/servicios-de-consultoria.png" alt="Móvil">
-      <span>Sistema Hostpot</span>
+      <span>Soluciones</span>
     </div>
     <div class="icon">
       <img src="../../../../assets/images/wifi.png" alt="Fibra">
-      <span>Servicio de Consultoría TI</span>
+      <span>Soporte</span>
     </div>
   </div>
 </header>
