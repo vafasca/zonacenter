@@ -49,17 +49,17 @@ export class InformationInterestComponent {
   onCardClick(index: number): void {
     if (index === 1) {
       this.dialog.open(PricingPlanComponent, {
-        width: '800px',
+        width: '80%',
         height: '500px',
       });
     } else if (index === 2) {
       this.dialog.open(ServiceConditionComponent, {
-        width: '800px',
+        width: '80%',
         height: '500px',
       });
     } else if (index === 3) {
       this.dialog.open(FaqComponent, {
-        width: '800px',
+        width: '880%',
         height: '500px',
       });
     } else {
