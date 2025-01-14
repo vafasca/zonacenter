@@ -14,6 +14,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
   margin: 1rem;
   list-style: none;
 }
@@ -50,13 +51,13 @@
 }
 
 .check-icon {
-  color: #784cfb; /* Azul */
-  margin-right: 0.5rem; /* Espacio entre el check y el texto */
+  color: #784cfb;
+  margin-right: 0.5rem;
 }
 
 .plan__btn {
-  background-color: #784cfb; /* Azul */
-  color: #ffffff; /* Blanco */
+  background-color: #784cfb;
+  color: #ffffff;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -67,4 +68,62 @@
 
 .plan__btn:hover {
   background-color: #501deb;
+}
+
+/* Móviles pequeños (menores a 540px) */
+@media (max-width: 540px) {
+  .hotspot-pricing__hero {
+    padding: 1rem;
+  }
+
+  .hotspot-pricing__hero__title {
+    font-size: 1.5rem;
+  }
+
+  .hotspot-pricing__plan__card {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .benefits li {
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablets (481px - 811px) */
+@media (min-width: 500px) and (max-width: 811px) {
+  .hotspot-pricing__hero {
+    padding: 1.5rem;
+  }
+
+  .hotspot-pricing__hero__title {
+    font-size: 1.8rem;
+  }
+
+  .hotspot-pricing__plan {
+    gap: 1rem;
+  }
+
+  .hotspot-pricing__plan__card {
+    max-width: 45%;
+  }
+}
+
+/* Escritorio (mayores a 768px) */
+@media (min-width: 769px) {
+  .hotspot-pricing__plan {
+    gap: 5rem;
+  }
+
+  .hotspot-pricing__plan__card {
+    max-width: 300px;
+  }
+
+  .price {
+    font-size: 1.8rem;
+  }
 }
