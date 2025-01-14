@@ -103,6 +103,14 @@
 
 .menu-list a:hover {
   color: #784cfb;
+  border-bottom: 2px solid #784cfb;
+  padding-bottom: 10px;
+}
+
+.menu-list a.active {
+  color: #784cfb;
+  border-bottom: 2px solid #784cfb;
+  padding-bottom: 10px;
 }
 
 .live-dot {
@@ -158,6 +166,9 @@ button:hover {
 
 .icon:hover {
   cursor: pointer;
+  filter: drop-shadow(
+    0 0 5px rgba(0, 0, 0, 0.8)
+  );
 }
 
 /* Responsiveness for screen sizes below 1300px */
@@ -179,7 +190,6 @@ button:hover {
     flex-direction: column;
     align-items: center;
     padding: 10px; /* Espaciado interno */
-    border-right: 1px solid #ddd; /* Líneas entre los íconos */
   }
 
   .icon-section > div:last-child {
@@ -254,6 +264,7 @@ button:hover {
     text-align: center; /* Centra el texto */
     transition: background-color 0.3s, color 0.3s;
     width: 100%; /* Extiende el enlace para cubrir el <li> */
+    position: relative;
   }
 
   .menu-list a:hover,
@@ -287,6 +298,16 @@ button:hover {
       transition: opacity 0.3s ease, transform 0.3s ease;
       opacity: 0;
       transform: translateY(-20px);
+    }
+
+    .menu-list a.active {
+      color: #784cfb;
+      border-bottom: none;
+    }
+
+    .menu-list a:hover {
+      color: #784cfb;
+      border-bottom: none;
     }
 
 }
