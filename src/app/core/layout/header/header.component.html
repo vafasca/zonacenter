@@ -27,8 +27,8 @@
     </div>
     <button class="menu-toggle" (click)="toggleMenu()">☰</button>
     <ul [class.active]="menuOpen" class="menu-list">
-      <li><a routerLink="/Wireless-Internet">Conexión Inalámbrica</a></li>
-      <li><a routerLink="/Hotspot-Mikrotik">Sistema Hotspot</a></li>
+      <li><a routerLink="/Wireless-Internet" [routerLinkActive]="['active']">Conexión Inalámbrica</a></li>
+      <li><a routerLink="/Hotspot-Mikrotik" [routerLinkActive]="['active']">Sistema Hotspot</a></li>
       <li><a href="#">Servicio de Consultoría TI</a></li>
       <li><a href="#">Contactos</a></li>
       <li><a href="#">Realizar Pago</a></li>
