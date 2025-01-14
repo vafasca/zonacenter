@@ -171,6 +171,12 @@ button:hover {
   );
 }
 
+.icon img.active {
+  filter: drop-shadow(
+    0 0 5px rgba(0, 0, 0, 0.8)
+  );
+}
+
 /* Responsiveness for screen sizes below 1300px */
 @media (max-width: 1265px) {
 

@@ -53,11 +53,11 @@
   </nav>
   <div class="icon-section" [ngClass]="{'hidden': hideIconSection}">
     <div class="icon">
-      <img routerLink="/Wireless-Internet" src="../../../../assets/images/torre-de-señal.png" alt="Fibra + Móvil">
+      <img routerLink="/Wireless-Internet" [routerLinkActive]="['active']" src="../../../../assets/images/torre-de-señal.png" alt="Fibra + Móvil">
       <span>Internet</span>
     </div>
     <div class="icon">
-      <img routerLink="/Hotspot-Mikrotik" src="../../../../assets/images/servicios-de-consultoria.png" alt="Móvil">
+      <img routerLink="/Hotspot-Mikrotik" [routerLinkActive]="['active']" src="../../../../assets/images/servicios-de-consultoria.png" alt="Móvil">
       <span>Soluciones</span>
     </div>
     <div class="icon">
