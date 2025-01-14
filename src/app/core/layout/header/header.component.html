@@ -14,7 +14,7 @@
       Servicio de Consultoría
     </button>
     <div class="social-icons">
-      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.facebook.com/zonawimax" target="_blank"><i class="bi bi-facebook"></i></a>
       <a href="#"><i class="bi bi-instagram"></i></a>
       <a href="#"><i class="bi bi-twitter"></i></a>
     </div>
@@ -27,8 +27,8 @@
     </div>
     <button class="menu-toggle" (click)="toggleMenu()">☰</button>
     <ul [class.active]="menuOpen" class="menu-list">
-      <li><a href="#">Conexión Inalámbrica</a></li>
-      <li><a href="#">Sistema Hostpot</a></li>
+      <li><a routerLink="/Wireless-Internet">Conexión Inalámbrica</a></li>
+      <li><a routerLink="/Hotspot-Mikrotik">Sistema Hotspot</a></li>
       <li><a href="#">Servicio de Consultoría TI</a></li>
       <li><a href="#">Contactos</a></li>
       <li><a href="#">Realizar Pago</a></li>
@@ -57,7 +57,7 @@
       <span>Conexión Inalámbrica</span>
     </div>
     <div class="icon">
-      <img src="../../../../assets/images/servicios-de-consultoria.png" alt="Móvil">
+      <img routerLink="/Hotspot-Mikrotik" src="../../../../assets/images/servicios-de-consultoria.png" alt="Móvil">
       <span>Sistema Hostpot</span>
     </div>
     <div class="icon">

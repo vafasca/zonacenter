@@ -18,6 +18,8 @@ import { InformationInterestComponent } from './information-interest/information
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { FaqComponent } from './faq/faq.component';
 import { ServiceConditionComponent } from './service-condition/service-condition.component';
+import { MainHotspotComponent } from '../hostpot/main-hotspot/main-hotspot.component';
+import { HotspotMikrotikComponent } from '../hostpot/hotspot-mikrotik/hotspot-mikrotik.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { ServiceConditionComponent } from './service-condition/service-condition
     MainWirelessConnectionPageComponent,
     InformationInterestComponent,
     FaqComponent,
-    ServiceConditionComponent
+    ServiceConditionComponent,
+    HotspotMikrotikComponent,
+    MainHotspotComponent
   ],
   imports: [
     CommonModule,

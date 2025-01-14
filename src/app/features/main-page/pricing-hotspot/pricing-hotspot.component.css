@@ -66,6 +66,5 @@
 }
 
 .plan__btn:hover {
-  background-color: #784cfb; /* Gris claro */
-  color: black; /* Azul */
+  background-color: #501deb;
 }
